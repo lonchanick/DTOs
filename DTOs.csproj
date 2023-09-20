@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+    <None Remove="DTOs.db-shm" />
+    <None Remove="DTOs.db-wal" />
+  </ItemGroup>
+
+  <ItemGroup>
 	  <Using Include="System.Console" Static="true"></Using>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.11" />

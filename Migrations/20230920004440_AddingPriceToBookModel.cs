@@ -5,24 +5,24 @@
 namespace DTOs.Migrations
 {
     /// <inheritdoc />
-    public partial class AddingAuthorIdPropertyToBookModel : Migration
+    public partial class AddingPriceToBookModel : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "AuthorId",
+            migrationBuilder.AddColumn<decimal>(
+                name: "Price",
                 table: "Books",
-                type: "INTEGER",
+                type: "TEXT",
                 nullable: false,
-                defaultValue: 0);
+                defaultValue: 0m);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "AuthorId",
+                name: "Price",
                 table: "Books");
         }
     }
